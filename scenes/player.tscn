@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2bre3ef5l3ut"]
+[gd_scene load_steps=4 format=3 uid="uid://d2bre3ef5l3ut"]
 
 [ext_resource type="Texture2D" uid="uid://brry8vdmo0k3a" path="res://icon.svg" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://c4evv0rcuotfl" path="res://scenes/sword.tscn" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(50, 103)
@@ -9,7 +10,7 @@ size = Vector2(50, 103)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-3.8147e-06, -51.5)
-scale = Vector2(0.398438, 0.804687)
+scale = Vector2(0.4, 0.8)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,3 +19,6 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -150)
+
+[node name="Sword" parent="." instance=ExtResource("2_g2els")]
+visible = false
